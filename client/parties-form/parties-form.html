@@ -1,0 +1,12 @@
+<div *ngIf="!user">Effettua il login per cambiare il party</div>
+<form [ngFormModel]="partiesForm" #f="ngForm" (submit)="addParty(f.value)">
+    <label>Name</label>
+    <input type="text" ngControl="name">
+    <label>Description</label>
+    <input type="text" ngControl="description">
+    <label>Location</label>
+    <input type="text" ngControl="location">
+    <label>Public</label>
+    <input type="checkbox" ngControl="public">
+    <button>Aggiungi</button>
+</form>
